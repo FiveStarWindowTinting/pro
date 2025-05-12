@@ -33,7 +33,10 @@
   box-shadow: var(--shadow-md);
 }
 
-
+/*images*/
+img {
+  margin-bottom: 60px;
+}
 
 /* Hero Section */
 .hero {
