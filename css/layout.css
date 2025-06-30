@@ -1,6 +1,5 @@
 /* Layout Styles */
 
-
 .container {
   width: 100%;
   max-width: var(--container-max-width);
@@ -12,9 +11,15 @@
 .section {
   padding: var(--spacing-xxl) 0;
   position: relative;
-  overflow: hidden;
+  overflow: visible;
 }
 
+
+/*images*/
+
+.section img {
+  margin-bottom: 60px;
+}
 
 /* Header */
 .site-header {
@@ -25,7 +30,7 @@
   background-color: transparent;
   transition: background-color var(--transition-normal);
   z-index: var(--z-header);
-  padding: var(--spacing-sm) 0;
+  padding: 20px; /* var(--spacing-xs) 0 Reduced from var(--spacing-sm) */
 }
 
 .site-header.scrolled {
@@ -33,10 +38,7 @@
   box-shadow: var(--shadow-md);
 }
 
-/*images*/
-img {
-  margin-bottom: 60px;
-}
+
 
 /* Hero Section */
 .hero {

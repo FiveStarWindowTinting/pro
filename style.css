@@ -5,9 +5,7 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  //20, 20, 20
+  background-color: #000000;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -35,18 +33,17 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
-  background-color: var(--carbon-color-base);
+  background-color: #000000;
   position: relative;
   overflow-x: hidden; /* Prevent horizontal scroll due to skew */
 
   background-image: 
-    linear-gradient(45deg, var(--carbon-color-light) 25%, transparent 25%, transparent 75%, var(--carbon-color-light) 75%, var(--carbon-color-light)),
-    linear-gradient(45deg, var(--carbon-color-light) 25%, transparent 25%, transparent 75%, var(--carbon-color-light) 75%, var(--carbon-color-light)),
-    linear-gradient(135deg, var(--carbon-color-highlight) 25%, transparent 25%, transparent 75%, var(--carbon-color-highlight) 75%, var(--carbon-color-highlight)),
-    linear-gradient(135deg, var(--carbon-color-highlight) 25%, transparent 25%, transparent 75%, var(--carbon-color-highlight) 75%, var(--carbon-color-highlight));
-  background-size: var(--carbon-weave-size) var(--carbon-weave-size);
-  background-position: 0 0, calc(var(--carbon-weave-size) / 2) calc(var(--carbon-weave-size) / 2),
-                      0 0, calc(var(--carbon-weave-size) / 2) calc(var(--carbon-weave-size) / 2);
+    linear-gradient(45deg, rgba(40, 40, 40, 0.05) 25%, transparent 25%, transparent 75%, rgba(40, 40, 40, 0.05) 75%, rgba(40, 40, 40, 0.05)),
+    linear-gradient(45deg, rgba(40, 40, 40, 0.05) 25%, transparent 25%, transparent 75%, rgba(40, 40, 40, 0.05) 75%, rgba(40, 40, 40, 0.05)),
+    linear-gradient(135deg, rgba(20, 20, 20, 0.03) 25%, transparent 25%, transparent 75%, rgba(20, 20, 20, 0.03) 75%, rgba(20, 20, 20, 0.03)),
+    linear-gradient(135deg, rgba(20, 20, 20, 0.03) 25%, transparent 25%, transparent 75%, rgba(20, 20, 20, 0.03) 75%, rgba(20, 20, 20, 0.03));
+  background-size: 10px 10px;
+  background-position: 0 0, 5px 5px, 0 0, 5px 5px;
 }
 
 /* Decorative skewed gradient stripe */
@@ -89,8 +86,6 @@ body::before {
     animation: none;
   }
 }
-
-
 
 h1 {
   font-size: 3.2em;
@@ -147,7 +142,7 @@ button:focus-visible {
 @media (prefers-color-scheme: light) {
   :root {
     color: #1a1a1a;
-    background-color: #ffffff;
+    background-color: #000000;
   }
   a:hover {
     color: #747bff;
@@ -156,7 +151,3 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
-
-
-
-

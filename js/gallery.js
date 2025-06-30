@@ -5,10 +5,10 @@
  */
 export function initGallery() {
   const galleryGrid = document.getElementById('galleryGrid');
-  const modal = document.getElementById('galleryModal');
-  const modalImg = document.getElementById('modalImage');
-  const modalCaption = document.getElementById('modalCaption');
-  const closeModal = document.querySelector('.modal-close');
+  // const modal = document.getElementById('galleryModal');
+  // const modalImg = document.getElementById('modalImage');
+  // const modalCaption = document.getElementById('modalCaption');
+  // const closeModal = document.querySelector('.modal-close');
   const filterButtons = document.querySelectorAll('.filter-btn');
   
   // Gallery items data
@@ -53,6 +53,8 @@ export function initGallery() {
   
   // Populate gallery
   function populateGallery(items) {
+    if (!galleryGrid) return;
+    
     galleryGrid.innerHTML = '';
     
     items.forEach(item => {
@@ -67,9 +69,12 @@ export function initGallery() {
         </div>
       `;
       
+      // Commented out modal functionality
+      /*
       galleryItem.addEventListener('click', () => {
         openModal(item.image, item.caption);
       });
+      */
       
       galleryGrid.appendChild(galleryItem);
     });
@@ -84,6 +89,8 @@ export function initGallery() {
     populateGallery(filteredItems);
   }
   
+  // Commented out modal functions
+  /*
   // Open modal
   function openModal(src, caption) {
     modal.style.display = 'flex';
@@ -118,6 +125,7 @@ export function initGallery() {
       closeModalFunc();
     }
   });
+  */
   
   // Filter button events
   filterButtons.forEach(button => {

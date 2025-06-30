@@ -15,6 +15,12 @@
 
 .reviews-widget{
   height: 85vh;
+  margin-bottom: var(--spacing-xxl);
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 /* Logo */
@@ -22,7 +28,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: var(--spacing-xs) 0;
+  padding: var(--spacing-xs) 0 0 0; /* Removed bottom padding */
 }
 
 .logo img {
@@ -829,12 +835,45 @@
   opacity: 1;
 }
 
+/* Header Container */
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Always center content */
+  flex-direction: column; /* Stack vertically by default */
+  gap: var(--spacing-xs); /* Reduced gap between logo and nav */
+  width: 100%;
+  padding: var(--spacing-xs) 0; /* Reduced vertical padding */
+}
+
+/* Header call button - always visible */
+.header-call-button {
+  margin: var(--spacing-xs) 0;
+}
+
+.header-call-button .btn {
+  min-width: 180px;
+  justify-content: center;
+}
+
+/* Footer call button spacing */
+.footer-call-button {
+  margin-top: var(--spacing-lg);
+  margin-bottom: var(--spacing-md);
+}
+
+.footer-call-button .btn {
+  min-width: 180px;
+  justify-content: center;
+}
+
 /* Responsive Components */
 @media (max-width: 1000px) {
   .menu-toggle {
     display: block;
   }
   
+  /* Mobile navigation positioning */
   .nav-list {
     position: fixed;
     top: 0;
@@ -845,7 +884,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: var(--spacing-xl);
+    padding: 0 var(--spacing-xl) var(--spacing-xl) var(--spacing-xl);
     transition: right var(--transition-normal);
     z-index: calc(var(--z-header) - 1);
   }
@@ -857,10 +896,6 @@
   .nav-link {
     font-size: var(--fs-md);
     padding: var(--spacing-sm) 0;
-  }
-  
-  .nav-phone {
-    margin: var(--spacing-md) 0 0 0;
   }
   
   .hero-buttons {
@@ -883,5 +918,20 @@
     height: 60px !important; /* Force the logo to maintain its size */
     min-height: 60px; /* Ensure minimum height */
     width: auto;
+  }
+  
+  .nav-list {
+    width: 100%;
+    padding: 0 var(--spacing-lg) var(--spacing-lg) var(--spacing-lg);
+  }
+  
+  .header-container {
+    gap: var(--spacing-xxs); /* Even smaller gap on mobile */
+    padding: var(--spacing-xxs) 0;
+  }
+  
+  .header-call-button .btn {
+    width: 100%;
+    max-width: 280px;
   }
 }

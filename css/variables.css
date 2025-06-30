@@ -18,7 +18,7 @@
   --color-error: #ff3333;
   
   /* Dark mode colors */
-  --color-dark: #0a0a0a;
+  --color-dark: #000000;
   --color-dark-80: #1a1a1a;
   --color-dark-60: #2a2a2a;
   --color-dark-40: #3a3a3a;
@@ -91,7 +91,7 @@
 
   /* Carbon Fiber Pattern */
   --carbon-weave-size: 10px;
-  --carbon-color-base: #080808;
+  --carbon-color-base: #000000;
   --carbon-color-light: rgba(40, 40, 40, 0.05);
   --carbon-color-highlight: rgba(20, 20, 20, 0.03);
 }

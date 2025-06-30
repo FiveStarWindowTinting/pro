@@ -126,6 +126,8 @@ export function initTestimonials() {
   // Start auto-play
   startAutoPlay();
   
+  // Commented out mouseenter/mouseleave event listeners
+  /*
   // Pause auto-play when hovering over slider
   testimonialSlider.addEventListener('mouseenter', () => {
     if (autoPlayTimer) {
@@ -140,4 +142,5 @@ export function initTestimonials() {
       startAutoPlay();
     }
   });
+  */
 }
