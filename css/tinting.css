@@ -118,7 +118,7 @@
 .controls-content {
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 4px;
     align-items: center;
     justify-content: center;
     padding: 0;
@@ -130,7 +130,7 @@
 }
 
 .tint-adjuster {
-    height: 154px;
+    height: 140px;
     position: relative;
     flex-shrink: 0;
     width: 318px;
@@ -142,9 +142,10 @@
 .tint-adjuster-content {
     display: flex;
     flex-direction: column;
-    height: 154px;
+    height: 140px;
     align-items: flex-start;
     justify-content: flex-start;
+    gap: 8px;
     padding: 0;
     margin: 0;
     position: relative;
@@ -195,7 +196,7 @@
 
 .tint-label p {
     display: block;
-    line-height: 50px;
+    line-height: 1.2;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -224,7 +225,7 @@
 
 .tint-value p {
     display: block;
-    line-height: 68px;
+    line-height: 1.1;
     white-space: nowrap;
     text-align: left;
     margin: 0;
@@ -232,7 +233,7 @@
 }
 
 .tint-disclaimer {
-    margin-top: var(--spacing-xs);
+    margin-top: 0;
     margin-bottom: 0;
     text-align: center;
     width: 100%;
@@ -241,7 +242,7 @@
 
 .tint-disclaimer p {
     font-family: 'Open Sans', sans-serif;
-    font-size: 12px;
+    font-size: 11px;
     font-style: italic;
     color: rgba(255, 255, 255, 0.7);
     line-height: 1.3;
@@ -252,7 +253,7 @@
 }
 
 .level-adjuster {
-    height: 86px;
+    height: 80px;
     position: relative;
     flex-shrink: 0;
     width: 100%;
@@ -339,11 +340,11 @@
     }
     
     .controls-content {
-        gap: 6px;
+        gap: 2px;
     }
     
     .tint-disclaimer p {
-        font-size: 11px;
+        font-size: 10px;
         max-width: 260px;
     }
     
@@ -353,18 +354,18 @@
     
     .tint-adjuster {
         width: 300px;
-        height: 154px;
+        height: 120px;
         max-height: none;
     }
     
     .tint-adjuster-content {
         width: 300px;
-        height: 154px;
+        height: 120px;
         max-height: none;
     }
     
     .level-adjuster {
-        height: 86px;
+        height: 70px;
         width: 100%;
     }
     
@@ -391,11 +392,11 @@
     }
     
     .controls-content {
-        gap: 4px;
+        gap: 1px;
     }
     
     .tint-disclaimer p {
-        font-size: 10px;
+        font-size: 9px;
         max-width: 240px;
     }
     
@@ -405,18 +406,18 @@
     
     .tint-adjuster {
         width: 280px;
-        height: 154px;
+        height: 110px;
         max-height: none;
     }
     
     .tint-adjuster-content {
         width: 280px;
-        height: 154px;
+        height: 110px;
         max-height: none;
     }
     
     .level-adjuster {
-        height: 86px;
+        height: 65px;
         width: 100%;
     }
     
@@ -453,12 +454,19 @@
     
     .tint-adjuster {
         width: 260px;
+        height: 100px;
         max-height: none;
     }
     
     .tint-adjuster-content {
         width: 260px;
+        height: 100px;
         max-height: none;
+    }
+    
+    .level-adjuster {
+        height: 60px;
+        width: 100%;
     }
     
     .tint-label {
