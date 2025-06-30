@@ -23,6 +23,17 @@
   box-sizing: border-box;
 }
 
+/* Location text styling */
+.location-text {
+  text-align: center;
+  font-size: var(--fs-md);
+  color: var(--color-primary);
+  font-weight: var(--fw-medium);
+  margin-bottom: var(--spacing-md);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
 /* Logo */
 .logo {
   display: flex;
@@ -852,17 +863,6 @@
 }
 
 .header-call-button .btn {
-  min-width: 180px;
-  justify-content: center;
-}
-
-/* Footer call button spacing */
-.footer-call-button {
-  margin-top: var(--spacing-lg);
-  margin-bottom: var(--spacing-md);
-}
-
-.footer-call-button .btn {
   min-width: 180px;
   justify-content: center;
 }
