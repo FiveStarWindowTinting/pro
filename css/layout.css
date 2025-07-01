@@ -30,7 +30,7 @@
   background-color: transparent;
   transition: background-color var(--transition-normal);
   z-index: var(--z-header);
-  padding: 20px; /* var(--spacing-xs) 0 Reduced from var(--spacing-sm) */
+  padding: 0 20px 20px 20px; /* Remove top padding, keep others */
 }
 
 .site-header.scrolled {

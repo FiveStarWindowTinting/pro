@@ -52,6 +52,14 @@
   transform: scale(1.05);
 }
 
+/* Large screen logo sizing */
+@media (min-width: 1201px) {
+  .logo img {
+    height: 120px; /* 2x the original 60px */
+    width: auto;
+  }
+}
+
 /* Navigation */
 .main-nav {
   display: flex;
