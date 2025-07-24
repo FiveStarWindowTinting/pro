@@ -181,17 +181,50 @@ export function initSlideshow() {
   /**
    * Create image elements and dots
    */
-  function createImages() {
+  async function loadAndCreateImages() {
     const imagesContainer = document.getElementById('slideshowImages');
     
-    imageUrls.forEach((url, index) => {
-      // Create image element
+    // Create promises for each image to check if it loads
+    const imagePromises = imageUrls.map((url, index) => {
+      return new Promise((resolve) => {
+        const img = new Image();
+        
+        img.onload = () => {
+          resolve({ url, index, loaded: true });
+        };
+        
+        img.onerror = () => {
+          console.warn(`Failed to load image: ${url}`);
+          resolve({ url, index, loaded: false });
+        };
+        
+        img.src = url;
+      });
+    });
+    
+    // Wait for all images to either load or fail
+    const imageResults = await Promise.all(imagePromises);
+    
+    // Filter out failed images and create elements for successful ones
+    const successfulImages = imageResults.filter(result => result.loaded);
+    
+    if (successfulImages.length === 0) {
+      console.warn('No images could be loaded for the slideshow');
+      // Hide slideshow container if no images loaded
+      slideshowContainer.style.display = 'none';
+      return false;
+    }
+    
+    // Create slideshow elements for successfully loaded images
+    successfulImages.forEach((imageResult, index) => {
       const imageDiv = document.createElement('div');
       imageDiv.className = `slideshow-image ${index === 0 ? 'active' : ''}`;
-      imageDiv.innerHTML = `<img src="${url}" alt="Gallery image ${index + 1}" loading="lazy">`;
+      imageDiv.innerHTML = `<img src="${imageResult.url}" alt="Gallery image ${index + 1}" loading="lazy">`;
       imagesContainer.appendChild(imageDiv);
       slideshowImages.push(imageDiv);
     });
+    
+    return true;
   }
 
   /**
@@ -257,9 +290,14 @@ export function initSlideshow() {
   /**
    * Initialize the slideshow
    */
-  function init() {
+  async function init() {
     createSlideshowStructure();
-    createImages();
+    
+    // Load and create images, exit if none loaded successfully
+    const imagesLoaded = await loadAndCreateImages();
+    if (!imagesLoaded) {
+      return;
+    }
 
     // Add event listeners to navigation buttons
     const prevButton = document.getElementById('prevSlide');
