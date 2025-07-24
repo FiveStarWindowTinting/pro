@@ -1042,6 +1042,126 @@
   opacity: 1;
 }
 
+/* Image Slideshow Styles */
+.slideshow-section {
+  background-color: var(--color-secondary);
+  color: var(--color-light);
+  padding: var(--spacing-xl) 0;
+  position: relative;
+}
+
+.slideshow-wrapper {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+  border-radius: var(--border-radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+}
+
+.slideshow-images {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+}
+
+.slideshow-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out;
+}
+
+.slideshow-image.active {
+  opacity: 1;
+}
+
+.slideshow-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.slideshow-controls {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-lg);
+  background: rgba(0, 0, 0, 0.7);
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: var(--border-radius-xl);
+  backdrop-filter: blur(10px);
+}
+
+.slideshow-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--border-radius-round);
+  border: 2px solid var(--color-light);
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition-fast);
+  cursor: pointer;
+}
+
+.slideshow-btn:hover {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+.slideshow-btn:hover .arrow {
+  border-color: var(--color-light);
+}
+
+/* Mobile adjustments for slideshow */
+@media (max-width: 768px) {
+  .slideshow-images {
+    height: 300px;
+  }
+  
+  .slideshow-controls {
+    bottom: 15px;
+    gap: var(--spacing-lg);
+    padding: var(--spacing-xs) var(--spacing-sm);
+  }
+  
+  .slideshow-btn {
+    width: 35px;
+    height: 35px;
+  }
+}
+
+@media (max-width: 576px) {
+  .slideshow-wrapper {
+    margin: 0 var(--spacing-sm);
+  }
+  
+  .slideshow-images {
+    height: 250px;
+  }
+  
+  .slideshow-controls {
+    bottom: 10px;
+    gap: var(--spacing-lg);
+    padding: var(--spacing-xxs) var(--spacing-xs);
+  }
+  
+  .slideshow-btn {
+    width: 30px;
+    height: 30px;
+  }
+}
+
 @keyframes fadeInUp {
   from {
     opacity: 0;

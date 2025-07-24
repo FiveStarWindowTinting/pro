@@ -7,6 +7,7 @@ import { initMap } from './map.js';
 import { initAnimations } from './animations.js';
 import { initTinting } from './tinting.js';
 import { initVideoLanding } from './video-landing.js';
+import { initSlideshow } from './slideshow.js';
 
 // Wait for DOM to be fully loaded
 document.addEventListener('DOMContentLoaded', () => {
@@ -21,6 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initMap();
   initAnimations();
   initTinting();
+  initSlideshow();
   
   console.log('Five Star Tinting - Site initialized');
 });
