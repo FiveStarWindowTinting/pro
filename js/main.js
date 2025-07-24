@@ -6,9 +6,13 @@ import { initContactForm } from './contact-form.js';
 import { initMap } from './map.js';
 import { initAnimations } from './animations.js';
 import { initTinting } from './tinting.js';
+import { initVideoLanding } from './video-landing.js';
 
 // Wait for DOM to be fully loaded
 document.addEventListener('DOMContentLoaded', () => {
+  // Initialize video landing page first
+  initVideoLanding();
+  
   // Initialize all modules
   initNavigation();
   initGallery();

@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Five Star Tinting - Premium Automotive Window Tinting</title>
+    <title>Five Star Window Tinting - Premium Automotive Window Tinting</title>
     
     <!-- Light mode favicon -->
     <link rel="icon" type="image/svg+xml" media="(prefers-color-scheme: light)" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cpath d='M37.6915 10.64C37.4251 9.7866 36.2654 9.78661 35.999 10.64L32.2196 22.7489H36.2521C36.7435 22.7489 37.1419 23.1635 37.1419 23.6751C37.1419 24.1867 36.7435 24.6014 36.2521 24.6014H6.29062C6.12957 24.6047 6 24.7416 6 24.91C6 25.0806 6.13279 25.2188 6.29659 25.2188H16.7329C16.6398 25.5278 16.6955 25.8856 16.9461 26.1451H30.3203C30.8117 26.1451 31.2101 26.5598 31.2101 27.0714C31.2101 27.5829 30.8117 27.9976 30.3203 27.9976H9.5531C9.39205 28.0009 9.26248 28.1378 9.26248 28.3063C9.26248 28.4768 9.39527 28.615 9.55907 28.615H20.1926L27.1324 33.8639H10.1522C9.98845 33.8639 9.85566 34.0021 9.85566 34.1726C9.85566 34.3431 9.98845 34.4814 10.1522 34.4814H27.9476C28.2158 34.7022 28.3375 35.0629 28.2642 35.4076H37.4384C37.9298 35.4076 38.3282 35.8223 38.3282 36.3339C38.3282 36.8454 37.9298 37.2601 37.4384 37.2601H14.0079C13.8441 37.2601 13.7113 37.3983 13.7113 37.5689C13.7113 37.7394 13.8441 37.8776 14.0079 37.8776H27.4976L27.2085 38.8039H30.6169C31.1083 38.8039 31.5067 39.2186 31.5067 39.7301C31.5067 40.2417 31.1083 40.6564 30.6169 40.6564H16.9738C16.81 40.6564 16.6772 40.7946 16.6772 40.9651C16.6772 41.1356 16.81 41.2739 16.9738 41.2739H26.4375L24.0937 48.7833C23.8273 49.6366 24.7656 50.3463 25.4629 49.8188L36.3223 41.6055C36.6341 41.3697 37.0564 41.3697 37.3683 41.6055L48.2276 49.8188C48.9249 50.3463 49.8632 49.6366 49.5968 48.7833L45.4489 35.4939C45.3298 35.1122 45.4603 34.6942 45.7722 34.4583L56.6315 26.245C57.3288 25.7176 56.9705 24.5694 56.1085 24.5694H42.6856C42.3001 24.5694 41.9585 24.311 41.8394 23.9294L37.6915 10.64Z' fill='%23CF232D'/%3E%3C/svg%3E">
@@ -29,6 +29,30 @@
     <script src="js/main.js" type="module" defer></script>
   </head>
   <body>
+    <!-- Video Landing Page -->
+    <div id="videoLanding" class="video-landing">
+      <video id="landingVideo" class="landing-video" muted playsinline>
+        <source src="https://res.cloudinary.com/dkkddqarx/video/upload/PerformanceRacing_gzul1t.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      
+      <div class="video-overlay">
+        <div class="video-controls">
+          <button id="soundToggle" class="sound-toggle-btn" aria-label="Toggle sound">
+            <svg id="soundOffIcon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M16.5 12C16.5 10.23 15.5 8.71 14 7.97V10.18L16.45 12.63C16.48 12.43 16.5 12.22 16.5 12ZM19 12C19 12.94 18.8 13.82 18.46 14.64L19.97 16.15C20.63 14.91 21 13.5 21 12C21 7.72 18 4.14 14 3.23V5.29C16.89 6.15 19 8.83 19 12ZM4.27 3L3 4.27L7.73 9H3V15H7L12 20V13.27L16.25 17.52C15.58 18.04 14.83 18.46 14 18.7V20.77C15.38 20.45 16.63 19.82 17.68 18.96L19.73 21L21 19.73L12 10.73L4.27 3ZM12 4L9.91 6.09L12 8.18V4Z" fill="white"/>
+            </svg>
+            <svg id="soundOnIcon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="display: none;">
+              <path d="M3 9V15H7L12 20V4L7 9H3ZM16.5 12C16.5 10.23 15.5 8.71 14 7.97V16.02C15.5 15.29 16.5 13.77 16.5 12ZM14 3.23V5.29C16.89 6.15 19 8.83 19 12S16.89 17.85 14 18.71V20.77C18.01 19.86 21 16.28 21 12S18.01 4.14 14 3.23Z" fill="white"/>
+            </svg>
+          </button>
+        </div>
+        
+      </div>
+    </div>
+
+    <!-- Main Website Content (initially hidden) -->
+    <div id="mainContent" class="main-content" style="display: none;">
     <header class="site-header" id="header">
       <div class="container header-container">
         <a href="#" class="logo">
@@ -37,7 +61,14 @@
         
         <!-- Always visible call button below logo -->
         <div class="header-call-button">
-          <a href="tel:9167507772" class="btn btn-primary"><span>Give us a Call<br>(916)750-7772</span></a>
+          <a href="tel:9167507772" class="btn btn-primary">
+            <span>
+              Give us a Call<br>
+              <svg width="14" height="15" viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg" style="display: inline-block; vertical-align: middle; margin-right: 6px;">
+                <path d="M4.06625 0.636921L0.754165 1.31039C0.604531 1.34082 0.487692 1.45794 0.457628 1.60765C-1.35741 10.6458 6.61467 18.6178 15.6528 16.8029C15.8026 16.7728 15.9197 16.656 15.9501 16.5063L16.6229 13.1936C16.7107 12.9318 16.5698 12.6489 16.308 12.5611L13.168 10.838C12.9731 10.7311 12.7311 10.7657 12.5739 10.9228L10.7178 12.7789C7.54512 12.1753 5.01607 9.57597 4.35387 6.41496L6.21361 4.55522C6.36904 4.39979 6.40473 4.16108 6.30156 3.96698L4.69878 0.951804C4.61089 0.690142 4.32799 0.549139 4.06625 0.636921Z" fill="white"/>
+              </svg>(916)750-7772
+            </span>
+          </a>
         </div>
         
         <nav class="main-nav">
@@ -61,9 +92,10 @@
 
           <div class="container">
                 <div class="header">
-                    <p>Shield Your Vehicle & Passengers</p>
+                    <p>Shield Your Vehicle & Passengers<br>from the torching sun's heat.</p>
                 </div>
-                
+
+        <div class="vehicle-wrapper">
           <div class="vehicle">
               
                         <svg class="tint-svg" viewBox="0 0 2731 990" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -71,6 +103,16 @@
                            <path d="M1894 82.9999C2022.29 86.4804 2098.65 160.672 2133.92 194.932L2134.5 195.5C2134.5 215.5 2134.5 231.32 2119 240C2094.59 253.668 2063.5 263.5 1862 291.5C1848.55 261.721 1840.74 256.503 1837.39 254.262C1837.25 254.17 1837.12 254.083 1837 254C1824.5 245.5 1763.5 239.655 1744 241C1726 242.241 1708 288.5 1703.5 307.5C1682.34 308.935 1666.58 310.112 1651.79 311.217C1645.97 311.652 1640.29 312.076 1634.5 312.5C1650.21 274.217 1704 175.499 1769 121C1804.5 92.7167 1844.91 81.6679 1894 82.9999Z" fill="#190A04" fill-opacity="0.34" class="tint-path"/> 
                         </svg>
                    
+          </div>
+          
+              <div class="vehicle">
+                  
+                            <svg class="tint-svg" viewBox="0 0 2731 990" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M842 324C889.333 268.333 1015.4 146.7 1141 105.5C1294.41 55.1782 1461.18 48.298 1524.71 45.6772C1526.2 45.6158 1527.63 45.5567 1529 45.4995C1530.63 45.4314 1532.31 45.3611 1534.03 45.289C1595.41 42.7144 1710.66 37.8807 1877 51.4994C1752.53 51.4995 1698.91 120.606 1660.21 170.48C1657.4 174.099 1654.67 177.617 1652 181C1628.55 210.679 1611.51 236.946 1597.8 258.064C1585.16 277.544 1575.36 292.643 1566 302C1547.9 320.101 1523.51 320.052 1500.08 320.004C1498.88 320.002 1497.69 320 1496.5 320C1492 320 1466.72 320.21 1427.76 320.535C1297 321.625 1012.14 324 842 324Z" fill="#190A04" fill-opacity="0.34" class="tint-path"/>
+                               <path d="M1894 82.9999C2022.29 86.4804 2098.65 160.672 2133.92 194.932L2134.5 195.5C2134.5 215.5 2134.5 231.32 2119 240C2094.59 253.668 2063.5 263.5 1862 291.5C1848.55 261.721 1840.74 256.503 1837.39 254.262C1837.25 254.17 1837.12 254.083 1837 254C1824.5 245.5 1763.5 239.655 1744 241C1726 242.241 1708 288.5 1703.5 307.5C1682.34 308.935 1666.58 310.112 1651.79 311.217C1645.97 311.652 1640.29 312.076 1634.5 312.5C1650.21 274.217 1704 175.499 1769 121C1804.5 92.7167 1844.91 81.6679 1894 82.9999Z" fill="#190A04" fill-opacity="0.34" class="tint-path"/> 
+                            </svg>
+                       
+              </div>
           </div>
 
             
@@ -141,7 +183,7 @@
       
       <section class="hero">
         <div class="hero-content container">
-          <h1 class="hero-title fade-in">Premium Auto<br>Window Tinting</h1>
+          <h1 class="hero-title fade-in">Previously in Rancho Cordova<br>Now in Roseville Ca</h1>
           <p class="hero-subtitle fade-in-delay">Professional installation. Lifetime warranty.</p>
 
                <div class="container">
@@ -207,7 +249,14 @@
               <h2 class="section-title">Get in Touch</h2>
               <p class="location-text">Now in Roseville CA</p>
               <div class="hero-buttons fade-in-delay-2">
-            <a href="tel:9167507772" class="btn btn-primary">Give us a Call<br>(916)750-7772</a>
+            <a href="tel:9167507772" class="btn btn-primary">
+              <span>
+                Give us a Call<br>
+                <svg width="14" height="15" viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg" style="display: inline-block; vertical-align: middle; margin-right: 6px;">
+                  <path d="M4.06625 0.636921L0.754165 1.31039C0.604531 1.34082 0.487692 1.45794 0.457628 1.60765C-1.35741 10.6458 6.61467 18.6178 15.6528 16.8029C15.8026 16.7728 15.9197 16.656 15.9501 16.5063L16.6229 13.1936C16.7107 12.9318 16.5698 12.6489 16.308 12.5611L13.168 10.838C12.9731 10.7311 12.7311 10.7657 12.5739 10.9228L10.7178 12.7789C7.54512 12.1753 5.01607 9.57597 4.35387 6.41496L6.21361 4.55522C6.36904 4.39979 6.40473 4.16108 6.30156 3.96698L4.69878 0.951804C4.61089 0.690142 4.32799 0.549139 4.06625 0.636921Z" fill="white"/>
+                </svg>(916)750-7772
+              </span>
+            </a>
           </div>
             </div>
             
@@ -261,5 +310,6 @@
         </div>
       </div>
     </footer>
+    </div>
   </body>
 </html>

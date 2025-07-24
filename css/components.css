@@ -943,3 +943,124 @@
     max-width: 280px;
   }
 }
+
+/* Video Landing Page Styles */
+.video-landing {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 9999;
+  background-color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.landing-video {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Mobile-specific video adjustments */
+@media (max-width: 768px) {
+  .video-landing {
+    align-items: center;
+  }
+  
+  .landing-video {
+    object-fit: contain;
+    object-position: center center;
+    width: 100vw;
+    height: 100vh;
+    min-width: 100vw;
+    min-height: 100vh;
+  }
+}
+
+/* For very small screens, ensure video covers properly */
+@media (max-width: 480px) {
+  .landing-video {
+    object-fit: contain;
+    object-position: center;
+    width: 100vw;
+    height: 100vh;
+    min-width: 100vw;
+    min-height: 100vh;
+  }
+}
+
+.video-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--spacing-xl);
+  pointer-events: none;
+}
+
+.video-controls {
+  align-self: flex-end;
+  margin-top: auto;
+  margin-bottom: var(--spacing-md);
+  pointer-events: auto;
+}
+
+.sound-toggle-btn {
+  background: rgba(0, 0, 0, 0.7);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: var(--border-radius-round);
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  backdrop-filter: blur(10px);
+}
+
+.sound-toggle-btn:hover {
+  background: rgba(0, 0, 0, 0.9);
+  border-color: rgba(255, 255, 255, 0.6);
+  transform: scale(1.1);
+}
+
+.main-content {
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+
+.main-content.show {
+  opacity: 1;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Mobile adjustments for video landing */
+@media (max-width: 768px) {
+  .video-overlay {
+    padding: var(--spacing-lg);
+  }
+  
+  .sound-toggle-btn {
+    width: 50px;
+    height: 50px;
+  }
+}
