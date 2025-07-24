@@ -4,6 +4,20 @@
  * Initialize the video landing page functionality
  */
 export function initVideoLanding() {
+  // Check if video has already been played in this session
+  if (sessionStorage.getItem('videoPlayedThisSession')) {
+    // Video already played, skip to main content immediately
+    const videoLanding = document.getElementById('videoLanding');
+    const mainContent = document.getElementById('mainContent');
+    
+    if (videoLanding && mainContent) {
+      videoLanding.style.display = 'none';
+      mainContent.style.display = 'block';
+      mainContent.classList.add('show');
+    }
+    return;
+  }
+  
   const videoLanding = document.getElementById('videoLanding');
   const landingVideo = document.getElementById('landingVideo');
   const soundToggle = document.getElementById('soundToggle');
@@ -16,6 +30,9 @@ export function initVideoLanding() {
   
   // Start playing the video when page loads
   function startVideo() {
+    // Mark that video has been played in this session
+    sessionStorage.setItem('videoPlayedThisSession', 'true');
+    
     landingVideo.play().catch(error => {
       console.log('Video autoplay failed:', error);
       // If autoplay fails, show enter site button immediately
@@ -61,7 +78,7 @@ export function initVideoLanding() {
       setTimeout(() => {
         mainContent.classList.add('show');
       }, 50);
-    }, 1000);
+    }, 0);
   }
   
   // Handle video loading and error states
